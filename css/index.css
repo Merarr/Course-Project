@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+
+
+/* Общие настройки*/
+html, body {
+    height: 100%;
+    font-family: 'Didact Gothic', sans-serif;
+    color: rgb(247, 238, 222);
+}
+
+form {
+    max-width: 50%;
+    margin: auto;
+    text-align: center;
+    margin-top: 15%;
+}
+
+.col {
+    font-family: 'Didact Gothic', sans-serif;
+    color: rgb(14, 13, 12);
+}
+
+input {
+    width: 40%;
+}
+
+textarea {
+    width: 40%;
+}
+
+/* Header */
+
+header {
+    background: content-box rgb(56, 54, 54);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 0 10px 0;
+    font-family: 'Didact Gothic', sans-serif;
+    color: rgb(247, 238, 222);
+}
+
+.header__text {
+    padding-top: 10px;
+    padding-right: 20px;
+}
+
+.logo {
+    padding: 0;
+}
+
+.courses {
+    margin-top: 2%;
+    margin-right: 10%;    
+}
+
+/* Ссылки */
+
+.urls {
+    color: black;
+}
+
+a {
+    font-family: 'Didact Gothic', sans-serif;
+    color: rgb(245, 227, 198);
+}
+
+.old_courses a {
+    color: green;
+}
+
+/* Основная часть */
+
+.section__middle {
+    margin: 0px 10px 10px 0px;
+    color: rgb(56, 54, 54);
+}
+
+.admin {
+    text-align: center;
+    color: red;
+}
+
+.old_courses {
+    text-align: center;
+}
+
+.gen_class {
+    margin: 20px 20px 20px 20px;
+    border: 1px solid black;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap:wrap-reverse;
+    float: left;
+    width: 30%;
+    height: 30%;
+    word-wrap: break-word; }
+
+/* Позиции gen-class */
+
+.gen_class:nth-child(1){
+    margin-top: 50px;
+}
+.gen_class:nth-child(2){
+    margin-top: 50px;
+}
+.gen_class:nth-child(3){
+    margin-top: 50px;
+}
+.gen_class:nth-child(4n + 4) {
+    width: 95.1%;
+}
+
+/* Содержимое gen-class */
+
+
+.title {
+    float: left;
+    text-align: center;
+    font-size: 32px;
+}
+
+
+li a {
+    display: flex;
+    flex-direction: row;
+}
+
+.gen_class a {
+    float:left;
+    margin-right: 20%;
+}
+
+.li_margin {
+    margin-bottom: 2%;
+}
