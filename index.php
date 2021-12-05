@@ -22,7 +22,7 @@
                         $_SESSION['auth'] = false;
                         } else 
                         {
-                        printf('<div class="header__text"> Вы авторизованы  </div>');
+                        printf('<div class="header__text"> <a href="#"> Личный кабинет </a>  </div>');
                         printf('<div class="courses"> <a href="new_course.html"> Добавить курс </a> </div>');
                         printf("<div class='header__text'> <a href='php/reg/exit.php'>Выйти</a> </div>");
                         $_SESSION['auth'] = true;
@@ -43,7 +43,6 @@
                     ?>
                 </div>
                 <div class="section__middle">
-                    <!-- CONTENT -->  
                     <?php
                         $mysql = new mysqli('localhost','root','root','courses'); 
                         $result = mysqli_query($mysql,"SELECT * FROM `main`");
@@ -56,18 +55,24 @@
                                 <li class="title"><?php echo $course['id']; echo ". "; echo $course['title']; ?> </li>
                                 <li><?php echo $course['text']; ?> </li>
                                 <li class="li_margin"> <a class="urls" href="<?php echo $course['url'];?>"> Ссылка на платформу (click) </a> </li>
-                                <br>
+
+                                <li class="li_margin"> <a class="urls" href="authors.php?authors_id=<?= $course['id_author'] ?>"> Автор </a> </li>
+
+                                <br> <br>
                                 <li> 
-                                    <a href="php/vendor/finish.php?id=<?= $course['id'] ?>"> <img width="32px" height="32px" src="library/actions/finish.png" alt="Завершить мероприятие"> </a> 
-                                    <a href="update.php?id=<?= $course['id'] ?>"><img width="32px" height="32px" src="library/actions/update.png" alt="Изменить мероприятие"></a>
-                                    <a href="php/vendor/delete_course.php?id=<?= $course['id'] ?>"><img width="32px" height="32px" src="library/actions/delete.png" alt="Удалить мероприятие"> </a> 
+                                    <a href="php/vendor/finish.php?id=<?= $course['id'] ?>"> 
+                                    <img width="32px" height="32px" src="library/actions/finish.png" alt="Завершить мероприятие"> </a> 
+                                    <a href="update.php?id=<?= $course['id'] ?>">
+                                    <img width="32px" height="32px" src="library/actions/update.png" alt="Изменить мероприятие"></a>
+                                    <a href="php/vendor/delete_course.php?id=<?= $course['id'] ?>">
+                                    <img width="32px" height="32px" src="library/actions/delete.png" alt="Удалить мероприятие"> </a>
+                            
                                 </li>
                             </ul>
                         </div>
                             <?php
                         }
                         ?>
-                    <!-- text -->
                 </div>
         </div>
     </div>

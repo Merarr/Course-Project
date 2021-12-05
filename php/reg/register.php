@@ -10,7 +10,8 @@
         
       require '../vendor/mysql.php';
       
-        $mysql->query("INSERT INTO `users` (`login`, `pass`, `name`, `surname`, `email`, `phone`) VALUES ('$c_login', '$s_pass', '$c_name', '$c_surname', '$c_email', '$c_phone')");
+        $mysql->query("INSERT INTO `users` (`login`, `pass`, `name`, `surname`, `email`, `phone`) 
+          VALUES ('$c_login', '$s_pass', '$c_name', '$c_surname', '$c_email', '$c_phone')");
         $mysql->close();
 
         header('Location: /');

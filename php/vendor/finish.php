@@ -12,7 +12,8 @@ if ($_COOKIE['user'] == '')
 
         require 'mysql.php';
         $result_id = $_GET['id']; 
-        $mysql->query("INSERT INTO `old_main` (`old_id`,`old_title`, `old_text`, `old_url`) SELECT * FROM `main` WHERE `id` = '$result_id'");
+        $mysql->query("INSERT INTO `old_main` (`old_id`,`old_title`, `old_text`, `old_url`) 
+        SELECT * FROM `main` WHERE `id` = '$result_id'");
         $mysql->query("DELETE FROM `main` WHERE `id` = '$result_id'");
         header('Location: http://localhost/index.php'); exit;
     } else {

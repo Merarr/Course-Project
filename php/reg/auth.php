@@ -15,7 +15,6 @@
         $mysql->close();
         header('Location: http://localhost/index.php'); exit;
         echo '<script>location.replace("http://localhost/index.php");</script>'; exit;
-
     }
     else {
         echo "<script> alert('Пользователь не найден')</script>";
